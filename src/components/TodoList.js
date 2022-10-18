@@ -61,15 +61,13 @@ function TodoList() {
   };
 
   const completeTodo = (id) => {
-    todos.map((todo) => {
+    let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
-        patchTodo(id, {...todo, isDone: todo.isComplete ? 0:1 }).then(() => {
-          getTodos().then((remoteTodos) => {
-            setTodos(remoteTodos);
-          });
-        });
+        todo.isComplete = !todo.isComplete;
       }
+      return todo;
     });
+    setTodos(updatedTodos);
   };
 
   return (
@@ -88,3 +86,16 @@ function TodoList() {
 }
 
 export default TodoList;
+
+/*const completeTodo = (id) => {
+    todos.map((todo) => {
+      if (todo.id === id) {
+        patchTodo(id, {...todo, isDone: todo.isComplete ? 0 : 1 }).then (() => {
+        getTodos().then((remoteTodos) => {
+          setTodos(remoteTodos);
+          });
+        });
+      }
+      return todo;
+    });
+  };*/
