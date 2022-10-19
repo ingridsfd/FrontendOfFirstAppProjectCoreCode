@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   background: #EEF1FF;
 }
+
 .todo-app {
   display: flex;
   flex-direction: column;
@@ -24,10 +25,26 @@ body {
   padding-bottom: 32px;
 }
 
+#light {
+  background: #D2DAFF;
+}
+
+#dark {
+  background: #1B1A17;
+}
+
 h1 {
   margin: 32px 0;
   color: #000000;
   font-size: 24px;
+}
+
+#light h1{
+  color: #000000;
+}
+
+#dark h1 {
+  color: white;
 }
 
 .complete {
@@ -50,6 +67,16 @@ h1 {
   color: #000000;
 }
 
+#light .todo-input {
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+#dark .todo-input {
+  border: 2px solid white;
+  color: white;
+}
+
 .todo-description {
   margin-top: 10px;
   width: 100%;
@@ -60,6 +87,14 @@ h1 {
 
 .todo-input::placeholder {
   color: #000000;
+}
+
+#light .todo-input::placeholder {
+  color: #000000;
+}
+
+#dark .todo-input::placeholder {
+  color: white;
 }
 
 .todo-button {
@@ -77,12 +112,38 @@ h1 {
   text-transform: capitalize;
 }
 
+#light .todo-button {
+  background: #98A8F8;
+  color: #000000
+}
+
+#dark .todo-button {
+  background: #3C4048;
+  color: white;
+}
+
 .todo-input.edit {
   border: 2px solid #000000;
 }
 
+#light .todo-input.edit {
+  border: 2px solid #000000;
+}
+
+#dark .todo-input.edit {
+  border: 2px solid white;
+}
+
 .todo-button.edit {
   background: #98A8F8;
+}
+
+#light .todo-button.edit {
+  background: #98A8F8;
+}
+
+#dark .todo-button.edit {
+  background: #3C4048;
 }
 
 .todo-container {
@@ -104,7 +165,15 @@ h1 {
   width: 100%;
 }
 
+#light .todo-row {
+  background: #C689C6;
+}
+
 .todo-row:nth-child(4n + 1) {
+  background: #E8A0BF;
+}
+
+#light .todo-row:nth-child(4n + 1) {
   background: #E8A0BF;
 }
 
@@ -112,8 +181,24 @@ h1 {
   background: #B1B2FF;
 }
 
+#light .todo-row:nth-child(4n + 2) {
+  background: #B1B2FF;
+}
+
 .todo-row:nth-child(4n + 3) {
   background: #AAC4FF;
+}
+
+#light .todo-row:nth-child(4n + 3) {
+  background: #AAC4FF;
+}
+
+#dark .todo-row, 
+#dark .todo-row:nth-child(4n + 1), 
+#dark .todo-row:nth-child(4n + 2), 
+#dark .todo-row:nth-child(4n + 3) {
+  color: white;
+  background: #3C4048;
 }
 
 .icons {
@@ -128,8 +213,24 @@ h1 {
   color: #000;
 }
 
+#light .delete-icon {
+  color: #000;
+}
+
+#dark .delete-icon {
+  color: white;
+}
+
 .edit-icon {
   color: #000;
+}
+
+#light .edit-icon {
+  color: #000;
+}
+
+#dark .edit-icon {
+  color: white;
 }
 
 .done {
@@ -143,4 +244,40 @@ h1 {
 
 .description {
   display: flex;
+}
+
+.switch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 180px;
+  padding-top: 24px;
+}
+
+#light .switch label{
+  color: black;
+}
+
+#dark .switch label{
+  color: white;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 24px;
+  
+}
+
+#light .credits label {
+  color: black;
+  background-color: #E5EBB2;
+  border-radius: 12px;
+}
+
+#dark .credits label {
+  color: white;
+  background-color: #3C4048;
+  border-radius: 12px;
 }
