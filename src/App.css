@@ -9,17 +9,13 @@
   font-family: 'Nunito', arial, sans-serif;
 }
 
-html, body {
+:root {
+  --bodyColor: "#000000";
+}
+
+body {
   min-height: 100vh;
-  background-color: #EEF1FF;
-}
-
-#light body{
-  background-color: #3C4048;
-}
-
-#dark body{
-  background-color: #3C4048;
+  background-color: var(--bodyColor);
 }
 
 .todo-app {
