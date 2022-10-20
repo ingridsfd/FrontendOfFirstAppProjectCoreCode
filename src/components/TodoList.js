@@ -63,7 +63,8 @@ function TodoList() {
   const completeTodo = (id) => {
     let updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
+        todo.is_done = !todo.is_done;
+        patchTodo(id, { ...todo }); 
       }
       return todo;
     });
@@ -86,16 +87,3 @@ function TodoList() {
 }
 
 export default TodoList;
-
-/*const completeTodo = (id) => {
-    todos.map((todo) => {
-      if (todo.id === id) {
-        patchTodo(id, {...todo, isDone: todo.isComplete ? 0 : 1 }).then (() => {
-        getTodos().then((remoteTodos) => {
-          setTodos(remoteTodos);
-          });
-        });
-      }
-      return todo;
-    });
-  };*/
