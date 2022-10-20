@@ -11,7 +11,7 @@ function App() {
 
   const toggleTheme = () => {
     setTheme((curr) => {
-      document.documentElement.style.setProperty('--bodyColor', curr === "light" ? "#000000" : "#ffffff");
+      document.documentElement.style.setProperty('--bodyColor', curr === "light" ? "#3C4048" : "#EEF1FF");
       return (curr === "light" ? "dark" : "light");
     });
   };

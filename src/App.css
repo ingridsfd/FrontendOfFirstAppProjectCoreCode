@@ -10,7 +10,7 @@
 }
 
 :root {
-  --bodyColor: "#000000";
+  --bodyColor: "#EEF1FF";
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 }
 
 #dark {
-  background: #1B1A17;
+  background: #181818;
 }
 
 h1 {
